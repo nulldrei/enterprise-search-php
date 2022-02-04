@@ -130,6 +130,7 @@ using the following endpoint:
 ```php
 use Elastic\EnterpriseSearch\Client;
 use Elastic\EnterpriseSearch\AppSearch\Request;
+use Elastic\EnterpriseSearch\AppSearch\Schema;
 
 $client = new Client([
     'host' => 'http://localhost:3002',
@@ -138,7 +139,7 @@ $client = new Client([
     ]
 ]);
 
-$app = $client->appSearch();
+$appSearch = $client->appSearch();
 
 // Create a 'test' engine
 $result = $appSearch->createEngine(
